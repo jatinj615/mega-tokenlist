@@ -11,7 +11,7 @@ The official token registry for the MegaETH ecosystem. This repository maintains
 
 ## Adding a Token
 
-1. Create a folder under `data/` with your token symbol (e.g., `data/USDC/`)
+1. Create a folder under `data/` with your token symbol (e.g., `data/WETH/`)
 2. Add a `data.json` file with token information
 3. Add a `logo.svg` or `logo.png` file (256x256 recommended)
 

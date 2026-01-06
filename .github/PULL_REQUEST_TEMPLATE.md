@@ -1,3 +1,6 @@
+<!-- PR Title: Add <SYMBOL> token on <CHAIN> -->
+<!-- Example: Add WETH token on Ethereum -->
+
 ## Token Submission
 
 ### Token Information
@@ -26,5 +29,12 @@
 - [ ] Token is deployed on specified chain(s)
 
 ### Additional Information
+
+- **Website**:
+- **Twitter**:
+- **Documentation**:
+- **CoinGecko/CoinMarketCap**:
+- **Team/Organization**:
+- **Description**:
 
 <!-- Any additional context about the token -->
