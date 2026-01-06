@@ -4,10 +4,10 @@ The official token registry for the MegaETH ecosystem. This repository maintains
 
 ## Supported Chains
 
-| Chain | Chain ID | Type |
-|-------|----------|------|
-| Ethereum | 1 | L1 |
-| MegaETH | 4326 | L2 |
+| Chain    | Chain ID | Type |
+| -------- | -------- | ---- |
+| Ethereum | 1        | L1   |
+| MegaETH  | 4326     | L2   |
 
 ## Adding a Token
 
@@ -40,6 +40,7 @@ The official token registry for the MegaETH ecosystem. This repository maintains
 - **Bridged token**: Has `bridge` field with the bridge contract address
 
 Example for a bridged token on MegaETH:
+
 ```json
 {
   "megaeth": {

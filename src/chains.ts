@@ -11,19 +11,19 @@ export const CHAINS = {
     name: 'MegaETH',
     layer: 2,
   },
-} as const;
+} as const
 
-export type Chain = keyof typeof CHAINS;
-export type L1Chain = 'ethereum';
-export type L2Chain = 'megaeth';
+export type Chain = keyof typeof CHAINS
+export type L1Chain = 'ethereum'
+export type L2Chain = 'megaeth'
 
 // Chain ID lookup
 export const CHAIN_IDS: Record<Chain, number> = {
   ethereum: 1,
   megaeth: 4326,
-};
+}
 
 // L2 to L1 mapping (for bridge relationships)
 export const L2_TO_L1: Record<L2Chain, L1Chain> = {
   megaeth: 'ethereum',
-};
+}

@@ -1,7 +1,7 @@
 name: Token Submission
 description: Submit a new token to the MegaETH Token List
-title: "[Token] "
-labels: ["token-submission"]
+title: '[Token] '
+labels: ['token-submission']
 body:
   - type: markdown
     attributes:
@@ -37,14 +37,14 @@ body:
     attributes:
       label: Ethereum Address
       description: Leave blank if not deployed on Ethereum
-      placeholder: "0x..."
+      placeholder: '0x...'
 
   - type: input
     id: megaeth-address
     attributes:
       label: MegaETH Address
       description: Leave blank if not deployed on MegaETH
-      placeholder: "0x..."
+      placeholder: '0x...'
 
   - type: dropdown
     id: token-type
@@ -61,7 +61,7 @@ body:
     attributes:
       label: Bridge Address
       description: Required if token is bridged
-      placeholder: "0x..."
+      placeholder: '0x...'
 
   - type: input
     id: website
