@@ -30,5 +30,6 @@ jobs:
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
+          token: ${{ secrets.TOKENLIST_SECRET }}
           commit_message: 'bot(ci): regenerate token list'
           file_pattern: '*.json data/**'
