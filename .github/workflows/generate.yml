@@ -1,10 +1,6 @@
 name: Generate Token List
 
 on:
-  pull_request:
-    branches: [main]
-    paths:
-      - 'data/**'
   push:
     branches: [main]
     paths:
@@ -17,9 +13,6 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.head_ref }}
-          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
@@ -34,5 +27,5 @@ jobs:
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: regenerate token list"
+          commit_message: "bot(ci): regenerate token list"
           file_pattern: "megaeth.tokenlist.json"
