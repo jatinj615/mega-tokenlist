@@ -1,0 +1,38 @@
+name: Generate Token List
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'data/**'
+  push:
+    branches: [main]
+    paths:
+      - 'data/**'
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate token list
+        run: npm run generate
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: regenerate token list"
+          file_pattern: "megaeth.tokenlist.json"

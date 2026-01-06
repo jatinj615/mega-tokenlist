@@ -1,0 +1,32 @@
+name: Validate PR
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check contributor permissions
+        id: check-permission
+        uses: actions-cool/check-user-permission@v2
+        with:
+          require: 'write'
+
+      - name: Validate external contributor changes
+        if: steps.check-permission.outputs.require-result == 'false'
+        run: |
+          FORBIDDEN_FILES=$(git diff --name-only origin/main...HEAD | grep -vE "^data/" || true)
+          if [ -n "$FORBIDDEN_FILES" ]; then
+            echo "❌ External contributors can only modify files in data/ folder"
+            echo ""
+            echo "Forbidden changes detected:"
+            echo "$FORBIDDEN_FILES"
+            exit 1
+          fi
+          echo "✅ PR only modifies allowed files in data/"

@@ -1,0 +1,92 @@
+name: Token Submission
+description: Submit a new token to the MegaETH Token List
+title: "[Token] "
+labels: ["token-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for submitting a token to the MegaETH Token List!
+
+  - type: input
+    id: token-name
+    attributes:
+      label: Token Name
+      placeholder: e.g., USD Coin
+    validations:
+      required: true
+
+  - type: input
+    id: token-symbol
+    attributes:
+      label: Token Symbol
+      placeholder: e.g., USDC
+    validations:
+      required: true
+
+  - type: input
+    id: decimals
+    attributes:
+      label: Decimals
+      placeholder: e.g., 18
+    validations:
+      required: true
+
+  - type: input
+    id: ethereum-address
+    attributes:
+      label: Ethereum Address
+      description: Leave blank if not deployed on Ethereum
+      placeholder: "0x..."
+
+  - type: input
+    id: megaeth-address
+    attributes:
+      label: MegaETH Address
+      description: Leave blank if not deployed on MegaETH
+      placeholder: "0x..."
+
+  - type: dropdown
+    id: token-type
+    attributes:
+      label: Token Type
+      options:
+        - Native (no bridge)
+        - Bridged (via canonical bridge)
+    validations:
+      required: true
+
+  - type: input
+    id: bridge-address
+    attributes:
+      label: Bridge Address
+      description: Required if token is bridged
+      placeholder: "0x..."
+
+  - type: input
+    id: website
+    attributes:
+      label: Project Website
+      placeholder: https://example.com
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Token Description
+      placeholder: Brief description of the token (max 1000 characters)
+
+  - type: textarea
+    id: logo
+    attributes:
+      label: Logo
+      description: Attach a logo file (SVG or PNG, 256x256 recommended) or provide a URL
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: Token is deployed and verified on the specified chain(s)
+          required: true
+        - label: Addresses are checksummed (EIP-55)
+          required: true
