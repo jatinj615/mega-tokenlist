@@ -1,6 +1,6 @@
 {
   "name": "MegaETH Token List",
-  "timestamp": "2026-01-06T12:22:40.156Z",
+  "timestamp": "2026-01-07T03:02:17.863Z",
   "version": {
     "major": 1,
     "minor": 0,
@@ -39,6 +39,17 @@
         "isNative": true
       },
       "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/ETH/logo.svg"
+    },
+    {
+      "chainId": 4326,
+      "address": "0x1230000000000000100000000000000000000000",
+      "name": "TEST",
+      "symbol": "TKN",
+      "decimals": 18,
+      "extensions": {
+        "isNative": true
+      },
+      "logoURI": "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/main/data/TEST/logo.svg"
     },
     {
       "chainId": 4326,
