@@ -1,0 +1,15 @@
+{
+  "name": "Staked Cap USD",
+  "symbol": "STCUSD",
+  "decimals": 18,
+  "description": "Staked Cap Stablecoin on MegaETH",
+  "tokens": {
+    "ethereum": {
+      "address": "0x88887bE419578051FF9F4eb6C858A951921D8888",
+      "bridge": "0x983AEAaA0d0426839158435C43725EA7F45d4137"
+    },
+    "megaeth": {
+      "address": "0x88887bE419578051FF9F4eb6C858A951921D8888"
+    }
+  }
+}
